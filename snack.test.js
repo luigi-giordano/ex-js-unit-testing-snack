@@ -18,8 +18,12 @@ test('La funzione createSlug sostituisce gli spazi con "-".', () => {
     expect(createSlug("Stringa nOn in MaIuscolo")).toBe("stringa-non-in-maiuscolo");
 })
 
-
 test('La funzione isPalindrome verifica se una stringa è un palindromo.', () => {
     expect(isPalindrome("anna ")).toBeTruthy();
     expect(isPalindrome("boolean")).toBeFalsy();
+})
+
+test('La funzione createSlug lancia un errore se il titolo è vuoto o non valido.', () => {
+    expect(() => createSlug("")).toThrow('Stringa non valida');
+    expect(() => createSlug(null)).toThrow('Stringa non valida');
 })
