@@ -17,8 +17,8 @@ function average(numeri) {
 }
 
 function isPalindrome(parola) {
-    const parolaInversa = parola.split('').reverse().join('');
-    return parola === parolaInversa
+    const parolaInversa = parola.trim().split('').reverse().join('');
+    return parola.trim() === parolaInversa
 }
 
 module.exports = {
